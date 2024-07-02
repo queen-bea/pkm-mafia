@@ -132,17 +132,17 @@ struct MonChoiceData{ // This is the format used to define a mon, everything lef
 //
 static const struct MonChoiceData sStarterChoices[9] = 
 {
-    [BALL_TOP_FIRST]        = {SPECIES_MUDKIP, 5, ITEM_POTION, BALL_NET, NATURE_JOLLY, 2, MON_MALE, {255, 255, 0, 0, 0, 0}, {31, 31, 31, 31, 31, 31}, {MOVE_FIRE_BLAST, MOVE_SHEER_COLD, MOVE_WATER_GUN, MOVE_THUNDER}, 0, 0, 0},
-    [BALL_TOP_SECOND]       = {SPECIES_TREECKO, 5},
-    [BALL_MIDDLE_FIRST]     = {SPECIES_TORCHIC, 5},
+    [BALL_TOP_FIRST]        = {SPECIES_TIMBURR, 5},
+    [BALL_TOP_SECOND]       = {SPECIES_QUAXLY, 5},
+    [BALL_MIDDLE_FIRST]     = {SPECIES_AXEW, 5},
 
-    [BALL_TOP_THIRD]        = {SPECIES_CHIKORITA, 5},
-    [BALL_TOP_FOURTH]       = {SPECIES_NONE, 5},
-    [BALL_MIDDLE_THIRD]     = {SPECIES_CYNDAQUIL, 5},
+    [BALL_TOP_THIRD]        = {SPECIES_SOLOSIS, 5},
+    [BALL_TOP_FOURTH]       = {SPECIES_MAREEP, 5},
+    [BALL_MIDDLE_THIRD]     = {SPECIES_LITWICK, 5},
 
-    [BALL_MIDDLE_SECOND]    = {SPECIES_BULBASAUR, 5},
-    [BALL_BOTTOM_FIRST]     = {SPECIES_CHARMANDER, 5},
-    [BALL_BOTTOM_SECOND]    = {SPECIES_NONE, 5},
+    [BALL_MIDDLE_SECOND]    = {SPECIES_TREECKO, 5},
+    [BALL_BOTTOM_FIRST]     = {SPECIES_TOGEPI, 5},
+    [BALL_BOTTOM_SECOND]    = {SPECIES_PORYGON, 5},
 };
 
 //==========EWRAM==========//
@@ -724,7 +724,7 @@ static void BirchCase_InitWindows(void)
 //
 //  Text Printing Function
 //
-static const u8 sText_ChooseMon[] = _("Release a Pokémon!");
+static const u8 sText_ChooseMon[] = _("Select a Pokémon!");
 static const u8 sText_AreYouSure[] = _("Are you sure?    {A_BUTTON} Yes  {B_BUTTON} No");
 static const u8 sText_RecievedMon[] = _("Give your Pokémon a Nickname?   {A_BUTTON} Yes  {B_BUTTON} No");
 static void PrintTextToBottomBar(u8 textId)
@@ -832,20 +832,22 @@ static void Task_WaitForFadeAndOpenNamingScreen(u8 taskId)
 
 static void Task_BirchCaseRecievedMon(u8 taskId)
 {
-    if(JOY_NEW(A_BUTTON))
-    {
-        PlaySE(SE_SELECT);
-        BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
-        gTasks[taskId].func = Task_WaitForFadeAndOpenNamingScreen;
-        return;
-    }
-    if (JOY_NEW(B_BUTTON))
-    {
+    // We will name the Pokemon later
+
+    // if(JOY_NEW(A_BUTTON))
+    // {
+    //     PlaySE(SE_SELECT);
+    //     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
+    //     gTasks[taskId].func = Task_WaitForFadeAndOpenNamingScreen;
+    //     return;
+    // }
+    // if (JOY_NEW(B_BUTTON))
+    // {
         PlaySE(SE_SELECT);
         BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_BirchCaseTurnOff;
         return;
-    }
+    // }
 }
 
 static void Task_BirchCaseConfirmSelection(u8 taskId)
