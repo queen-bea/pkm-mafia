@@ -750,7 +750,7 @@ static void PrintTextToBottomBar(u8 textId)
             mainBarAlternatingText = sText_AreYouSure;
             break;
         case 2:
-            mainBarAlternatingText = sText_RecievedMon;
+            mainBarAlternatingText = sText_AreYouSure;
             break;
         default:
             mainBarAlternatingText = sText_ChooseMon;
