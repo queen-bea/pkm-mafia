@@ -819,36 +819,14 @@ static void Task_DelayedSpriteLoad(u8 taskId) // wait 4 frames after changing th
     }
 }
 
-static void Task_WaitForFadeAndOpenNamingScreen(u8 taskId)
-{   
-    if (!gPaletteFade.active)
-    {
-        SetMainCallback2(sBirchCaseDataPtr->savedCallback);
-        BirchCaseFreeResources();
-        DestroyTask(taskId);
-        VarSet(VAR_0x8004, gPlayerPartyCount - 1);
-        ChangePokemonNickname();
-    }
-}
-
 static void Task_BirchCaseRecievedMon(u8 taskId)
 {
     // We will name the Pokemon later
 
-    // if(JOY_NEW(A_BUTTON))
-    // {
-    //     PlaySE(SE_SELECT);
-    //     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
-    //     gTasks[taskId].func = Task_WaitForFadeAndOpenNamingScreen;
-    //     return;
-    // }
-    // if (JOY_NEW(B_BUTTON))
-    // {
-        PlaySE(SE_SELECT);
-        BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
-        gTasks[taskId].func = Task_BirchCaseTurnOff;
-        return;
-    // }
+    PlaySE(SE_SELECT);
+    BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
+    gTasks[taskId].func = Task_BirchCaseTurnOff;
+    return;
 }
 
 static void Task_BirchCaseConfirmSelection(u8 taskId)
