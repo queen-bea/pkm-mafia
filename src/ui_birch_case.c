@@ -42,6 +42,7 @@
 #include "constants/moves.h"
 #include "naming_screen.h"
 #include "tv.h"
+#include "battle_main.h"
 
  /*
     9 Starter Selection Birch Case
@@ -87,9 +88,9 @@ enum Colors
 static const u8 sMenuWindowFontColors[][3] = 
 {
     [FONT_BLACK]  = {TEXT_COLOR_TRANSPARENT,  TEXT_COLOR_DARK_GRAY,  TEXT_COLOR_LIGHT_GRAY},
-    [FONT_WHITE]  = {TEXT_COLOR_TRANSPARENT,  TEXT_COLOR_WHITE,  TEXT_COLOR_DARK_GRAY},
-    [FONT_RED]   = {TEXT_COLOR_TRANSPARENT,  TEXT_COLOR_RED,        TEXT_COLOR_LIGHT_GRAY},
-    [FONT_BLUE]  = {TEXT_COLOR_TRANSPARENT,  TEXT_COLOR_BLUE,       TEXT_COLOR_LIGHT_GRAY},
+    [FONT_WHITE]  = {TEXT_COLOR_TRANSPARENT,  TEXT_COLOR_WHITE,      TEXT_COLOR_DARK_GRAY},
+    [FONT_RED]    = {TEXT_COLOR_TRANSPARENT,  TEXT_COLOR_RED,        TEXT_COLOR_LIGHT_GRAY},
+    [FONT_BLUE]   = {TEXT_COLOR_TRANSPARENT,  TEXT_COLOR_BLUE,       TEXT_COLOR_LIGHT_GRAY},
 };
 
 
@@ -783,7 +784,7 @@ static void PrintTextToBottomBar(u8 textId)
     if(textId != 2)
     {
 #ifdef POKEMON_EXPANSION
-        speciesCategoryText = GetSpeciesCategory(species);
+        speciesCategoryText = gTypesInfo[gSpeciesInfo[species].types[0]].name;
 #else
         speciesCategoryText = GetPokedexCategoryName(dexNum);
 #endif
