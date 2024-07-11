@@ -135,7 +135,7 @@ static const struct MonChoiceData sStarterChoices[9] =
 {
     [BALL_TOP_FIRST]        = {SPECIES_LITTEN,  5},
     [BALL_TOP_SECOND]       = {SPECIES_QUAXLY,  5},
-    [BALL_MIDDLE_FIRST]     = {SPECIES_SOLOSIS, 5},
+    [BALL_MIDDLE_FIRST]     = {SPECIES_AXEW   , 5},
 
     [BALL_TOP_THIRD]        = {SPECIES_ABRA,    5},
     [BALL_TOP_FOURTH]       = {SPECIES_MAREEP,  5},
