@@ -314,7 +314,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Fight"),
         .generic = _("a FIGHTING move"),
-        .palette = 13,
+        .palette = 15,
         .zMove = MOVE_ALL_OUT_PUMMELING,
         .maxMove = MOVE_MAX_KNUCKLE,
         //.enhanceItem = ITEM_BLACK_BELT,
@@ -410,7 +410,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Ghost"),
         .generic = _("a GHOST move"),
-        .palette = 14,
+        .palette = 15,
         .zMove = MOVE_NEVER_ENDING_NIGHTMARE,
         .maxMove = MOVE_MAX_PHANTASM,
         //.enhanceItem = ITEM_SPELL_TAG,
@@ -560,7 +560,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Dark"),
         .generic = _("a DARK move"),
-        .palette = 13,
+        .palette = 14,
         .zMove = MOVE_BLACK_HOLE_ECLIPSE,
         .maxMove = MOVE_MAX_DARKNESS,
         //.enhanceItem = ITEM_BLACK_GLASSES,
