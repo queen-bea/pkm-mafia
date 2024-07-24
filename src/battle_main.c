@@ -346,7 +346,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Poison"),
         .generic = _("a POISON move"),
-        .palette = 14,
+        .palette = 15,
         .zMove = MOVE_ACID_DOWNPOUR,
         .maxMove = MOVE_MAX_OOZE,
         //.enhanceItem = ITEM_POISON_BARB,
@@ -394,7 +394,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Bug"),
         .generic = _("a BUG move"),
-        .palette = 15,
+        .palette = 14,
         .zMove = MOVE_SAVAGE_SPIN_OUT,
         .maxMove = MOVE_MAX_FLUTTERBY,
         //.enhanceItem = ITEM_SILVER_POWDER,
@@ -410,7 +410,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Ghost"),
         .generic = _("a GHOST move"),
-        .palette = 15,
+        .palette = 13,
         .zMove = MOVE_NEVER_ENDING_NIGHTMARE,
         .maxMove = MOVE_MAX_PHANTASM,
         //.enhanceItem = ITEM_SPELL_TAG,
@@ -426,7 +426,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Steel"),
         .generic = _("a STEEL move"),
-        .palette = 13,
+        .palette = 14,
         .zMove = MOVE_CORKSCREW_CRASH,
         .maxMove = MOVE_MAX_STEELSPIKE,
         //.enhanceItem = ITEM_METAL_COAT,
@@ -496,7 +496,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Electr"),
         .generic = _("an ELECTRIC move"),
-        .palette = 13,
+        .palette = 15,
         .zMove = MOVE_GIGAVOLT_HAVOC,
         .maxMove = MOVE_MAX_LIGHTNING,
         //.enhanceItem = ITEM_MAGNET,
@@ -560,7 +560,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Dark"),
         .generic = _("a DARK move"),
-        .palette = 14,
+        .palette = 13,
         .zMove = MOVE_BLACK_HOLE_ECLIPSE,
         .maxMove = MOVE_MAX_DARKNESS,
         //.enhanceItem = ITEM_BLACK_GLASSES,
