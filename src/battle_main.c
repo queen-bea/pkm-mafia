@@ -314,7 +314,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Stronk"),
         .generic = _("a STRONK move"),
-        .palette = 15,
+        .palette = 14,
         .zMove = MOVE_ALL_OUT_PUMMELING,
         .maxMove = MOVE_MAX_KNUCKLE,
         //.enhanceItem = ITEM_BLACK_BELT,
@@ -394,7 +394,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Food"),
         .generic = _("a FOOD move"),
-        .palette = 14,
+        .palette = 13,
         .zMove = MOVE_SAVAGE_SPIN_OUT,
         .maxMove = MOVE_MAX_FLUTTERBY,
         //.enhanceItem = ITEM_SILVER_POWDER,
