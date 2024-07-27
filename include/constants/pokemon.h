@@ -22,7 +22,12 @@
 #define TYPE_DRAGON           16
 #define TYPE_DARK             17
 #define TYPE_FAIRY            18
-#define NUMBER_OF_MON_TYPES   19
+#define TYPE_MONKE            19
+#define TYPE_CAR              20
+#define TYPE_MONEY            21
+#define TYPE_POLICE           22
+#define TYPE_CRAB             23
+#define NUMBER_OF_MON_TYPES   24
 
 // Pokémon egg groups
 #define EGG_GROUP_NONE                0
